@@ -4,45 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TeaFiles</title>
+    <style>
+        body {
+          background: #8ef58e;
+          color: #ffffff;
+          font-family: Arial, sans-serif;
+        }
+    </style>
+    <title>Tea34 files xxx</title>
 </head>
 
 <body>
 
-<h3>Files/</h3>
-
-<div id="files">Loading...</div>
-
-<script>
-fetch("https://api.github.com/repos/TeaFiles/TeaFiles.github.io/contents/files")
-    .then(response => response.json())
-    .then(files => {
-        const container = document.getElementById("files");
-
-        container.innerHTML = "";
-
-        files
-            .filter(file => file.type === "file")
-            .forEach(file => {
-                const div = document.createElement("div");
-
-                const link = document.createElement("a");
-
-                link.href = "./files/" + encodeURIComponent(file.name);
-                link.textContent = file.name;
-                link.download = file.name;
-
-                div.appendChild(link);
-                container.appendChild(div);
-            });
-    })
-    .catch(error => {
-        document.getElementById("files").textContent =
-            "Ошибка загрузки файлов.";
-
-        console.error(error);
-    });
-</script>
+<h3>Loading content.../</h3>
 
 </body>
 </html>
